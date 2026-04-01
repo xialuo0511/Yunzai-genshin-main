@@ -142,7 +142,7 @@ class GsCfg {
    */
   shortName(name, isWeapon = false) {
     let obj = (isWeapon ? Weapon : Character).get(name)
-    return obj.abbr || obj.name || ""
+    return obj?.abbr || obj?.name || name || ""
   }
 
   /** 公共配置ck文件修改hook */
